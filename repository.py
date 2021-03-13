@@ -9,7 +9,7 @@ def find_hotels():
 
 
 def find_hotel(hotel_id):
-    return db.get(where('id') == hotel_id)
+    return db.get(where('id') == int(hotel_id))
 
 
 def create_hotel(hotel):
@@ -18,9 +18,9 @@ def create_hotel(hotel):
 
 
 def update_hotel(hotel_id, new_hotel):
-    return db.update(new_hotel, where('id') == hotel_id)
+    return db.update(new_hotel, where('id') == int(hotel_id))
 
 
 def delete_hotel(hotel_id):
-    return db.remove(where('id') == hotel_id)
+    return db.remove(where('id') == int(hotel_id))
 
