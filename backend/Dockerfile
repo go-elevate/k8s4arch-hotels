@@ -2,6 +2,7 @@ FROM python:alpine
 
 WORKDIR /app
 COPY *.py Dockerfile requirements.txt ./
+COPY assets ./assets
 
 RUN pip install -r requirements.txt
 

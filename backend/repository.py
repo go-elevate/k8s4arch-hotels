@@ -1,4 +1,3 @@
-from random import random
 from tinydb import TinyDB, where
 
 db = TinyDB('db.json')
@@ -13,7 +12,6 @@ def find_hotel(hotel_id):
 
 
 def create_hotel(hotel):
-    hotel['id'] = int(random() * 100000)
     return db.insert(hotel)
 
 
