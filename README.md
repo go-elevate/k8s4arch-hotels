@@ -1,6 +1,6 @@
 # k8s4arch-hotels
 
-[![docker-ci](https://github.com/go-elevate/k8s4arch-hotels/actions/workflows/build.yml/badge.svg)](https://github.com/go-elevate/k8s4arch-hotels/actions/workflows/build.yml)
+[![monolith-docker-ci](https://github.com/go-elevate/k8s4arch-hotels/actions/workflows/monolith.yml/badge.svg)](https://github.com/go-elevate/k8s4arch-hotels/actions/workflows/monolith.yml)
 
 Aplicación de hoteles implementada para la práctica del curso de Kubernetes para Arquitectos
 
