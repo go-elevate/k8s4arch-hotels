@@ -3,6 +3,10 @@ from tinydb import TinyDB, where
 db = TinyDB('db.json')
 
 
+def db_full():
+    return len(db) > 0
+
+
 def find_hotels():
     return db.all()
 
@@ -21,4 +25,3 @@ def update_hotel(hotel_id, new_hotel):
 
 def delete_hotel(hotel_id):
     return db.remove(where('id') == int(hotel_id))
-
