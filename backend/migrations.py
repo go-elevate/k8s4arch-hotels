@@ -1,21 +1,14 @@
 import logging
-import time
 from repository import create_hotel, db_full
-from utils import encode_image
+from utils import encode_image, current_time
 
 log = logging.getLogger('migrations')
-
-
-def current_time():
-    return time.time_ns() // 1_000_000
-
 
 if __name__ == "__main__":
     log.info("Starting migrations..")
 
     # If db is already populated, then do nothing
     if not db_full():
-
         # Creating hotels in DB
         create_hotel(dict(slug="la-bamba-de-areco",
                           name="La Bamba de Areco",
@@ -93,9 +86,10 @@ if __name__ == "__main__":
         create_hotel(dict(slug="azur-real",
                           name="Azur Real Hotel",
                           photo=encode_image("assets/images/azur-real.jpg"),
-                          description="La exclusividad rodeada de historia. Azur Real Hotel Boutique está ubicado en el "
-                                      "corazón de la zona comercial y el centro histórico de Córdoba, dentro de uno de "
-                                      "los principales circuitos culturales y turísticos de la ciudad.",
+                          description="La exclusividad rodeada de historia. Azur Real Hotel Boutique está ubicado en "
+                                      "el corazón de la zona comercial y el centro histórico de Córdoba, "
+                                      "dentro de uno de los principales circuitos culturales y turísticos de la "
+                                      "ciudad.",
                           availabilityFrom=current_time() + 1296000000,  # 15 days
                           availabilityTo=current_time() + 2592000000,  # 30 days
                           rooms=16,
@@ -165,11 +159,11 @@ if __name__ == "__main__":
         create_hotel(dict(slug="uxua-casa",
                           name="UXUA Casa Hotel & Spa",
                           photo=encode_image("assets/images/uxua-casa.jpg"),
-                          description="UXUA Casa Hotel & Spa es un hotel boutique cinco estrellas reconocido mundialmente "
-                                      "por su incomparable belleza tropical, el maravilloso bar con vista al mar, "
-                                      "el galardonado restaurante, un gimnasio totalmente equipado y el inigualable spa "
-                                      "Almescar que ofrece innovadores tratamientos con ingredientes extraídos de la "
-                                      "selva.",
+                          description="UXUA Casa Hotel & Spa es un hotel boutique cinco estrellas reconocido "
+                                      "mundialmente por su incomparable belleza tropical, el maravilloso bar con "
+                                      "vista al mar, el galardonado restaurante, un gimnasio totalmente equipado y el "
+                                      "inigualable spa Almescar que ofrece innovadores tratamientos con ingredientes "
+                                      "extraídos de la selva.",
                           availabilityFrom=current_time(),
                           availabilityTo=current_time() + 864000000,  # 10 days
                           rooms=11,
@@ -227,7 +221,8 @@ if __name__ == "__main__":
                           photo=encode_image("assets/images/vira-vira.jpg"),
                           description="Hotel Hacienda Vira Vira Relais & Chateaux se encuentra en una ubicación "
                                       "privilegiada, muy cerca de Pucón, Chile. Su impresionante parque nativo de 23 "
-                                      "hectáreas a orillas del río Liucura ofrece un oasis único de paz y tranquilidad.",
+                                      "hectáreas a orillas del río Liucura ofrece"
+                                      " un oasis único de paz y tranquilidad.",
                           availabilityFrom=current_time() + 864000000,  # 10 days
                           availabilityTo=current_time() + 1728000000,  # 20 days
                           rooms=21,
