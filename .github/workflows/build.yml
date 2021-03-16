@@ -19,7 +19,7 @@ jobs:
         with:
           registry: docker.pkg.github.com
           username: fcatinello
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: 968b7adc642e189af9ef4e1c53dc9e013ccac524  #PAT
 
       - name: Build and push Docker images
         id: docker_build
