@@ -17,9 +17,9 @@ jobs:
       - name: Docker Login
         uses: docker/login-action@v1.8.0
         with:
-          registry: ghcr.io
-          username: fcatinello
-          password: 968b7adc642e189af9ef4e1c53dc9e013ccac524  #PAT
+          registry: https://ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_PAT }}  #PAT
 
       - name: Build and push Docker images
         id: docker_build
