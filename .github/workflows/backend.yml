@@ -1,8 +1,10 @@
-name: docker-ci
+name: backend-docker-ci
 
 on:
   push:
     branches: [ master ]
+    paths:
+      - backend/
 
   workflow_dispatch:
 
