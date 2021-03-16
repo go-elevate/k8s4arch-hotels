@@ -1,6 +1,7 @@
 from tinydb import TinyDB, where
+import os
 
-db = TinyDB('db.json')
+db = TinyDB(os.getenv('DB_PATH', default='db.json'))
 
 
 def db_full():
