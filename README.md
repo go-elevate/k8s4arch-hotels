@@ -1,7 +1,6 @@
 # k8s4arch-hotels
 
-[![frontend-docker-ci](https://github.com/go-elevate/k8s4arch-hotels/actions/workflows/frontend.yml/badge.svg)](https://github.com/go-elevate/k8s4arch-hotels/actions/workflows/frontend.yml)
-[![backend-docker-ci](https://github.com/go-elevate/k8s4arch-hotels/actions/workflows/backend.yml/badge.svg)](https://github.com/go-elevate/k8s4arch-hotels/actions/workflows/backend.yml)
+[![docker-ci](https://github.com/go-elevate/k8s4arch-hotels/actions/workflows/ci.yml/badge.svg)](https://github.com/go-elevate/k8s4arch-hotels/actions/workflows/ci.yml)
 
 Aplicación de hoteles implementada para la práctica del curso de Kubernetes para Arquitectos
 

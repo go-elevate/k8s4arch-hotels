@@ -1,4 +1,4 @@
-name: backend-docker-ci
+name: docker-ci
 
 on:
   push:
