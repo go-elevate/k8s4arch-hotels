@@ -6,7 +6,7 @@ seed(1)
 
 
 def _calculate_daily_reservations(hotel):
-    reservations = randint(0, hotel['rooms'])
+    reservations = randint(1, hotel['rooms'])
     print(f"Hotel {hotel['name']} had {reservations} reservations. "
           f"Hotel is at {reservations / hotel['rooms'] * 100}% of its full capacity")
 
