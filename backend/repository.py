@@ -1,7 +1,8 @@
 from tinydb import TinyDB, where
 import os
 
-db = TinyDB(os.getenv('DB_PATH', default='db.json'), default_table=os.getenv('DB_TABLE', default='hotels'))
+db = TinyDB(os.getenv('DB_PATH', default='db.json'))
+db.default_table_name = os.getenv('DB_TABLE', default='hotels')
 
 
 def db_full():
