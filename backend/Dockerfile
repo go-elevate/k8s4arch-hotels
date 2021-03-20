@@ -9,5 +9,7 @@ RUN pip install -r requirements.txt
 ENV FLASK_APP=controller.py
 ENV FLASK_ENV=production
 
+RUN mkdir /db
+
 ENTRYPOINT ["flask"]
 CMD ["run", "--host=0.0.0.0"]
