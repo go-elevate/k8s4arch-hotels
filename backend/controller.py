@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from repository import *
 from pathlib import Path
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -11,7 +12,7 @@ log = app.logger
 # Health Check Route
 @app.route('/status', methods=['GET'])
 def status():
-    raw_data = Path("db.json")
+    raw_data = Path(os.getenv('DB_PATH', default='db.json'))
     if raw_data.is_file():
         health_check = jsonify(status='UP'), 200
         log.info('Application is UP')
