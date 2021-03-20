@@ -1,8 +1,5 @@
-import logging
 from repository import create_hotel, db_full
 from utils import encode_image, current_time
-
-log = logging.getLogger('migrations')
 
 
 def create_hotels():
@@ -271,11 +268,11 @@ def create_hotels():
 
 
 if __name__ == "__main__":
-    log.info("Starting migrations..")
+    print("Starting migrations..")
 
     # If db is already populated, then do nothing
     if not db_full():
         # Creating hotels in DB
         create_hotels()
 
-    log.info("Finishing migrations..")
+    print("Finishing migrations..")
