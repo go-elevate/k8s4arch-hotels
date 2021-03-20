@@ -1,6 +1,6 @@
 from random import randint, seed, sample
 import logging
-import subprocess
+from migrations import create_hotels
 import repository as db
 
 log = logging.getLogger('report')
@@ -16,7 +16,7 @@ def _calculate_daily_reservations(hotel):
 if __name__ == "__main__":
 
     # Fill DB with migration script
-    subprocess.call('migrations.py', shell=True)
+    create_hotels()
 
     hotels = db.find_hotels()
 
