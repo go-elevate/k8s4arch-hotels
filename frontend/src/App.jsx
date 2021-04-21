@@ -13,6 +13,8 @@ import Filter from "./Filter";
 import HotelInfo from "./HotelInfo";
 import Error from "./Error";
 
+const { REACT_APP_API_HOST } = process.env
+
 export default function App() {
   const [hotelsRawData, setHotelsRawData] = useState([]);
   const [deleteResult, setDeleteResult] = useState(false);
@@ -22,7 +24,7 @@ export default function App() {
 
   // Get hotels from backend API
   async function fetchHotelsData() {
-    const response = await fetch(`${window._env_.HOTELS_API_HOST}/hotels`
+    const response = await fetch(`${REACT_APP_API_HOST}/hotels`
     ,{
       headers : { 
         'Content-Type': 'application/json',
