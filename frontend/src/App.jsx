@@ -24,7 +24,7 @@ export default function App() {
 
   // Get hotels from backend API
   async function fetchHotelsData() {
-    const response = await fetch(`${REACT_APP_API_HOST}/hotels`
+    const response = await fetch(`${window._env_.HOTELS_API_HOST}/hotels`
     ,{
       headers : { 
         'Content-Type': 'application/json',
